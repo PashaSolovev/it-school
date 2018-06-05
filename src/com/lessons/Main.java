@@ -7,9 +7,8 @@ public class Main {
 
         for(Season season: Season.values()){
             System.out.println(season + ":");
-            for(Months month: Months.values()){
-                if(season.toString()==month.getSeason())
-                    System.out.println(month);
+            for(Months month: season.getSeasonMonths()){
+                    System.out.println( "There are " + month.getDays() + " days in " + month.toString() );
             }
         }
 
